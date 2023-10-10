@@ -15,8 +15,8 @@ int main(int argc, char *argv[]) {
 
 
   std::cout << "size,stride,latency" << std::endl;
-  for (int size = 256; size < max_size; size <<= 1) {
-    int reps = size*10;
+  for (int size = 256; size <= max_size; size <<= 1) {
+    int reps = max_size*25;
     std::vector<int> data(size);
     for (int stride = 1; stride < size; stride <<= 1) {
       std::cout << size*sizeof(int) << ",";
